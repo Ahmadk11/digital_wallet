@@ -10,7 +10,7 @@ class AuthController {
         global $conn;
         $this->user = new User($conn);
     }
-    
+
     public function register($email, $password, $phone_number) {
         $this->user->email = $email;
         $this->user->password_hash = $password;
@@ -27,7 +27,7 @@ class AuthController {
 
         if ($user && password_verify($password, $user['password_hash'])) {
             $_SESSION['user_id'] = $user['id'];
-            return true; 
+            return true;
         }
         return false;
     }
