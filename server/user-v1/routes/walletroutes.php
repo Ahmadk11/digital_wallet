@@ -14,9 +14,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && $_GET['action'] == 'get_balance') {
     echo json_encode($walletController->getBalance($user_id));
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_GET['action'] == 'update_balance') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_GET['action'] == 'deposit') {
     $user_id = $_POST['user_id'];
     $amount = $_POST['amount'];
-    echo json_encode($walletController->updateBalance($user_id, $amount));
+    echo json_encode($walletController->deposit($user_id, $amount));
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_GET['action'] == 'withdraw') {
+    $user_id = $_POST['user_id'];
+    $amount = $_POST['amount'];
+    echo json_encode($walletController->withdraw($user_id, $amount));
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_GET['action'] == 'transfer') {
+    $user_id = $_POST['user_id'];
+    $recipient_id = $_POST['recipient_id'];
+    $amount = $_POST['amount'];
+    echo json_encode($walletController->transfer($user_id, $recipient_id, $amount));
 }
 ?>
