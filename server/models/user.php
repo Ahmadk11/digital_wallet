@@ -16,7 +16,6 @@ class User {
         $this->conn = $db;
     }
 
-    // Create a new user
     public function create() {
         $query = "INSERT INTO $this->table (email, password_hash, phone_number) VALUES (:email, :password, :phone)";
         $stmt = $this->conn->prepare($query);
@@ -29,7 +28,6 @@ class User {
         return $stmt->execute();
     }
 
-    // Find user by email
     public function findByEmail($email) {
         $query = "SELECT * FROM $this->table WHERE email = :email LIMIT 1";
         $stmt = $this->conn->prepare($query);
