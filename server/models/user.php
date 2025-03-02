@@ -55,32 +55,15 @@ class User {
         $stmt->bindParam(':user_id', $user_id);
 
       
-    public function update() {
-        $query = "UPDATE $this->table SET email = :email, phone_number = :phone, tier = :tier, is_active = :is_active, updated_at = NOW() WHERE id = :id";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':email', $this->email);
-        $stmt->bindParam(':phone', $this->phone_number);
-        $stmt->bindParam(':tier', $this->tier);
-        $stmt->bindParam(':is_active', $this->is_active);
-        $stmt->bindParam(':id', $this->id);
-
-        return $stmt->execute();
-    }
-
-      
-    public function updateTier($user_id, $tier) {
+  public function updateTier($user_id, $tier) {
         $query = "UPDATE $this->table SET tier = :tier, updated_at = NOW() WHERE id = :user_id";
-
-      
-    public function delete() {
-        $query = "DELETE FROM $this->table WHERE id = :id";
-
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':tier', $tier);
         $stmt->bindParam(':user_id', $user_id);
 
         return $stmt->execute();
     }
+
 
     public function delete($user_id) {
         $query = "DELETE FROM $this->table WHERE id = :user_id";
