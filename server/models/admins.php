@@ -1,7 +1,7 @@
 <?php
 class Admin {
     private $conn;
-    private $table = 'admins';
+    private $table = 'admin';
 
     public $id;
     public $username;
