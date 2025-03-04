@@ -4,6 +4,7 @@ $dbname = 'digital_wallet';
 $username = 'root';
 $password = '';
 
+
 $conn = new mysqli($host, $username, $password, $dbname);
 
 if ($conn->connect_error) {

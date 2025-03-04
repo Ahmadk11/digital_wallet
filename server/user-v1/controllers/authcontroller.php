@@ -32,7 +32,6 @@ class AuthController {
         return false;
     }
 
-
     public function logout() {
         session_destroy();
         return true;
