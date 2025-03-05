@@ -53,9 +53,10 @@ class User {
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':phone_number', $phone_number);
         $stmt->bindParam(':user_id', $user_id);
+    }
 
       
-  public function updateTier($user_id, $tier) {
+    public function updateTier($user_id, $tier) {
         $query = "UPDATE $this->table SET tier = :tier, updated_at = NOW() WHERE id = :user_id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':tier', $tier);
