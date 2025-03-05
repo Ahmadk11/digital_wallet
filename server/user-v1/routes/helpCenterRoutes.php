@@ -3,7 +3,7 @@ require_once '../controllers/helpCenterController.php';
 
 $helpCenterController = new HelpCenterController();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_GET['action'] == 'create_article') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_GET['action']) && $_GET['action'] == 'create_article') {
     $title = $_POST['title'];
     $content = $_POST['content'];
     $category = $_POST['category'];

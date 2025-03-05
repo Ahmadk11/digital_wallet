@@ -3,7 +3,7 @@ require_once '../controllers/profileController.php';
 
 $profileController = new ProfileController();
 
-if ($_SERVER['REQUEST_METHOD'] == 'GET' && $_GET['action'] == 'get_profile') {
+if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['action']) && $_GET['action'] == 'get_profile') {
     $user_id = $_GET['user_id'];
     echo json_encode($profileController->getProfile($user_id));
 }

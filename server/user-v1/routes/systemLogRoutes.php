@@ -3,7 +3,7 @@ require_once '../controllers/systemLogController.php';
 
 $systemLogController = new SystemLogController();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_GET['action'] == 'create_log') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_GET['action']) && $_GET['action'] == 'create_log') {
     $admin_id = $_POST['admin_id'];
     $action = $_POST['action'];
     $details = $_POST['details'];

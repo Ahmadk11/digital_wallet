@@ -3,7 +3,7 @@ require_once '../controllers/adminController.php';
 
 $adminController = new AdminController();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_GET['action'] == 'login') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_GET['action']) && $_GET['action'] == 'login') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 

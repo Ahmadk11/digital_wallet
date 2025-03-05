@@ -3,7 +3,7 @@ require_once '../controllers/walletcontroller.php';
 
 $walletController = new WalletController();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_GET['action'] == 'create_wallet') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_GET['action']) && $_GET['action'] == 'create_wallet') {
     $user_id = $_POST['user_id'];
     $currency = $_POST['currency'];
     echo json_encode($walletController->createWallet($user_id, $currency));

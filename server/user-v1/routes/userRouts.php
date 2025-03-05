@@ -4,7 +4,7 @@ require_once '../controllers/authcontroller.php';
 $authController = new AuthController();
 
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_GET['action'] == 'register') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_GET['action']) && $_GET['action'] == 'register') {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $phone_number = $_POST['phone_number'];

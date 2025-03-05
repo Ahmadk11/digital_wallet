@@ -3,7 +3,7 @@ require_once '../controllers/qrCodeController.php';
 
 $qrCodeController = new QrCodeController();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_GET['action'] == 'generate_qr_code') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_GET['action']) && $_GET['action'] == 'generate_qr_code') {
     $user_id = $_POST['user_id'];
     $recipient_id = $_POST['recipient_id'];
     $amount = $_POST['amount'];
