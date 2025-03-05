@@ -3,7 +3,7 @@ require_once '../controllers/notificationsController.php';
 
 $notificationController = new NotificationController();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_GET['action'] == 'send_notification') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_GET['action']) && $_GET['action'] == 'send_notification') {
     $user_id = $_POST['user_id'];
     $message = $_POST['message'];
     $type = $_POST['type'];
