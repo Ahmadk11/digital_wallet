@@ -1,5 +1,5 @@
 <?php
-require_once '../controllers/SystemLogController.php';
+require_once '../controllers/systemLogController.php';
 
 $systemLogController = new SystemLogController();
 

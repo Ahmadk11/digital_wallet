@@ -1,5 +1,5 @@
 <?php
-require_once '../controllers/WalletController.php';
+require_once '../controllers/walletcontroller.php';
 
 $walletController = new WalletController();
 

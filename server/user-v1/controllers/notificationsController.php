@@ -1,5 +1,5 @@
 <?php
-require_once '../../models/Notification.php';
+require_once '../../models/notifications.php';
 require_once '../../connection/db.php';
 
 class NotificationController {

@@ -1,5 +1,5 @@
 <?php
-require_once '../controllers/QrCodeController.php';
+require_once '../controllers/qrCodeController.php';
 
 $qrCodeController = new QrCodeController();
 

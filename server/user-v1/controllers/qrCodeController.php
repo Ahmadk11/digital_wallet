@@ -1,6 +1,6 @@
 <?php
-require_once '../../models/QrCode.php';
-require_once '../../models/Transaction.php';
+require_once '../../models/qrCode.php';
+require_once '../../models/transaction.php';
 require_once '../../connection/db.php';
 
 class QrCodeController {

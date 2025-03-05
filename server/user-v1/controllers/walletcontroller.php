@@ -1,6 +1,6 @@
 <?php
-require_once '../../models/Wallet.php';
-require_once '../../models/Transaction.php';
+require_once '../../models/wallet.php';
+require_once '../../models/transaction.php';
 require_once '../../connection/db.php';
 
 class WalletController {
