@@ -1,5 +1,5 @@
 <?php
-require_once '../../models/HelpCenter.php';
+require_once '../../models/helpCenter.php';
 require_once '../../connection/db.php';
 
 class HelpCenterController {

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../../models/User.php';
+require_once '../../models/user.php';
 require_once '../../connection/db.php';
 
 class AuthController {

@@ -1,5 +1,5 @@
 <?php
-require_once '../../models/SystemLog.php';
+require_once '../../models/systemLog.php';
 require_once '../../connection/db.php';
 
 class SystemLogController {

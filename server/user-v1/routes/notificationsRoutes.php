@@ -1,5 +1,5 @@
 <?php
-require_once '../controllers/NotificationController.php';
+require_once '../controllers/notificationsController.php';
 
 $notificationController = new NotificationController();
 

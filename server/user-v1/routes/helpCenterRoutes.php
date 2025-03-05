@@ -1,5 +1,5 @@
 <?php
-require_once '../controllers/HelpCenterController.php';
+require_once '../controllers/helpCenterController.php';
 
 $helpCenterController = new HelpCenterController();
 

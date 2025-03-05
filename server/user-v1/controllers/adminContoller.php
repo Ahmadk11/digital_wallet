@@ -1,7 +1,7 @@
 <?php
-require_once '../../models/Admin.php';
-require_once '../../models/User.php';
-require_once '../../models/Transaction.php';
+require_once '../../models/admins.php';
+require_once '../../models/user.php';
+require_once '../../models/transaction.php';
 require_once '../../connection/db.php';
 
 class AdminController {
